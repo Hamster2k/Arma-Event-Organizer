@@ -1,0 +1,17 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Arma Event Organizer</title>
+      {% else %}
+      <title>Arma Event Organizer</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Arma Event Organizer:
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('event') }}">Post New Event</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
